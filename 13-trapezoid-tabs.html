@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trapezoid tabs</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  float: left;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.tabs {
+  padding-left: 20px;
+}
+.tab {
+  position: relative;
+  padding: .5em 1em .35em;
+  color: #000;
+  top: 1px
+}
+.tab::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: -1px; left: 0;
+  z-index: -1;
+  transform: scaleX(1.25) scaleY(1.4) perspective(0.5em) rotateX(5deg);
+  transform-origin: bottom;
+  background: #ccc;
+  background-image: linear-gradient(
+    hsla(0,0%,100%,.6),
+    hsla(0,0%,100%,0)
+  );
+  border: 1px solid rgba(0,0,0,.4);
+  border-width: 2px 1px 0;
+  border-radius: .5em .5em 0 0;
+  box-shadow: 0 0px 5px rgba(0,0,0,.3);
+}
+.tab::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 100%; right: -15px; left: -15px;
+  height: 15px;
+  background: #fff;
+}
+.tab.active {
+  z-index: 1;
+}
+.tab.active::before {
+  background: #fff;
+}
+.box {
+  clear: left;
+  width: 500px;
+  height: 100px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.4);
+}
+</style>
+</head>
+<body>
+
+<div class="tabs">
+  <div class="tab">Trapezoid</div>
+  <div class="tab">Trapezoid</div>
+  <div class="active tab">Trapezoid</div>
+  <div class="tab">Trapezoid</div>
+</div>
+<div class="box"></div>
+</body>
+</html>

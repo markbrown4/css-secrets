@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flexible background-position</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  vertical-align: middle;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.extended-background-position {
+  background: #fff url(img/react-logo.svg) no-repeat;
+  background-position: right 10px bottom 10px;
+}
+.background-origin {
+  padding: 10px;
+  background: #fff url(img/react-logo.svg) no-repeat bottom right;
+  background-origin: content-box;
+}
+.calc {
+  background: #fff url(img/react-logo.svg) no-repeat calc(100% - 10px) calc(100% - 10px);
+}
+</style>
+</head>
+<body>
+
+<div class="extended-background-position"></div>
+<div class="background-origin"></div>
+<div class="calc"></div>
+
+</body>
+</html>

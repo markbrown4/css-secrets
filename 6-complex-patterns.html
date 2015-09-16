@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Complex patterns</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  vertical-align: middle;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  background: #fff;
+}
+.tablecloth {
+  background: #fff;
+  background-image: linear-gradient(to bottom,
+    rgba(200,0,0,.4) 50%,
+    transparent 0
+  ), linear-gradient(to right,
+    rgba(200,0,0,.4) 50%,
+    transparent 0
+  );
+  background-size: 30px 30px;
+}
+.blueprint {
+  background: #487FC1;
+  background-image:
+    linear-gradient(#fff 2px, transparent 0),
+    linear-gradient(hsla(0,0%,100%,.3) 1px, transparent 0),
+    linear-gradient(to right, #fff 2px, transparent 0),
+    linear-gradient(to right, hsla(0,0%,100%,.3) 1px, transparent 0);
+  background-size: 75px 75px, 15px 15px, 75px 75px, 15px 15px;
+  background-position: -1px -1px;
+}
+.polka {
+  background: #F05562;
+  background-image:
+    radial-gradient(#fff 20%, transparent 0),
+    radial-gradient(#fff 20%, transparent 0);
+  background-size: 50px 50px;
+  background-position: 0 0, 50% 50%;
+}
+.checkerboard {
+  background: #000;
+  background-image:
+    linear-gradient(45deg, #fff 25%, transparent 0, transparent 75%, #fff 0),
+    linear-gradient(45deg, #fff 25%, transparent 0, transparent 75%, #fff 0);
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+}
+.svg-checkerboard {
+  background: #fff url('data:image/svg+xml,\
+  <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">\
+    <rect x="50" width="50px" height="50" />\
+    <rect y="50" width="50px" height="50" />\
+  </svg>')
+}
+</style>
+</head>
+<body>
+
+<div class="tablecloth"></div>
+<div class="blueprint"></div>
+<div class="polka"></div>
+<div class="checkerboard"></div>
+<div class="svg-checkerboard"></div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Translucent borders</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background: #fff;
+  background-clip: padding-box;
+}
+.white-border {
+  border: 10px solid hsla(0,0%,100%,.3);
+}
+.black-border {
+  border: 10px solid hsla(0,0%,0%,.3);
+}
+</style>
+</head>
+<body>
+
+<div class="white-border"></div>
+<div class="black-border"></div>
+
+</body>
+</html>

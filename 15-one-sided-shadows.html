@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>One sided shadows</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  background: #fff;
+}
+.single {
+  box-shadow: 0 5px 5px -5px black;
+}
+.double {
+  box-shadow: 5px 5px 5px -5px black;
+}
+.opposites {
+  box-shadow: 0 5px 5px -5px black, 0 -5px 5px -5px black;
+}
+</style>
+</head>
+<body>
+
+<div class="single"></div>
+<div class="double"></div>
+<div class="opposites"></div>
+
+</body>
+</html>

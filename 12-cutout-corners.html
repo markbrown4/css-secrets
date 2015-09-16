@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cutout corners</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+.one-corner {
+  background: hsla(0,0%,100%, .8);
+  background: linear-gradient(45deg, transparent 15px, hsla(0,0%,100%, .8) 0);
+}
+.four-corners {
+  background: hsla(0,0%,100%, .8);
+  background:
+    linear-gradient(135deg, transparent 15px, hsla(0,0%,100%, .8) 0) top left,
+    linear-gradient(-135deg, transparent 15px, hsla(0,0%,100%, .8) 0) top right,
+    linear-gradient(-45deg, transparent 15px, hsla(0,0%,100%, .8) 0) bottom right,
+    linear-gradient(45deg, transparent 15px, hsla(0,0%,100%, .8) 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+.round-corners {
+  background: hsla(0,0%,100%, .8);
+  background:
+    radial-gradient(circle at top left, transparent 15px, hsla(0,0%,100%, .8) 0) top left,
+    radial-gradient(circle at top right, transparent 15px, hsla(0,0%,100%, .8) 0) top right,
+    radial-gradient(circle at bottom right, transparent 15px, hsla(0,0%,100%, .8) 0) bottom right,
+    radial-gradient(circle at bottom left, transparent 15px, hsla(0,0%,100%, .8) 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+.svg-bevel {
+  border: 15px solid transparent;
+  border-image: 1 url('data:image/svg+xml,\
+    <svg width="3" height="3" xmlns="http://www.w3.org/2000/svg">\
+      <polygon points="0,1 1,0 2,0 3,1, 3,2 2,3 1,3 0,2" fill="hsla(0,0%,100%, .8)" />\
+    </svg>');
+  background: hsla(0,0%,100%, .8);
+  background-clip: padding-box;
+}
+.clip-path {
+  background: hsla(0,0%,100%, .8);
+  -webkit-clip-path: polygon(
+    20px 0, calc(100% - 20px) 0, 100% 20px,
+    100% calc(100% - 20px), calc(100% - 20px) 100%,
+    20px 100%, 0 calc(100% - 20px), 0 20px
+  );
+}
+</style>
+</head>
+<body>
+
+<div class="one-corner"></div>
+<div class="four-corners"></div>
+<div class="round-corners"></div>
+<div class="svg-bevel"></div>
+<div class="clip-path"></div>
+
+</body>
+</html>

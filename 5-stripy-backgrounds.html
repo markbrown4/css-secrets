@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Stripy backgrounds</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  vertical-align: middle;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  background: #fff;
+}
+.horizontal {
+  background: linear-gradient(
+    #F05562 50%,
+    #F0DB4F 50%
+  );
+  background-size: 100% 30px;
+}
+.vertical {
+  background: linear-gradient(to right,
+    #F05562 50%,
+    #F0DB4F 50%
+  );
+  background-size: 30px 100%;
+}
+.diagonal-tile {
+  background: linear-gradient(45deg,
+    #F05562 25%,
+    #F0DB4F 0,
+    #F0DB4F 50%,
+    #F05562 0,
+    #F05562 75%,
+    #F0DB4F 0
+  );
+  background-size: 43px 43px;
+}
+.repeating-linear-gradient {
+  background: repeating-linear-gradient(45deg,
+    #F05562,
+    #F05562 15px,
+    #F0DB4F 0,
+    #F0DB4F 30px
+  );
+}
+.repeating-linear-gradient-60 {
+  background: repeating-linear-gradient(60deg,
+    #F05562,
+    #F05562 15px,
+    #F0DB4F 0,
+    #F0DB4F 30px
+  );
+}
+.hsla {
+  background: #F05562;
+  background-image: repeating-linear-gradient(60deg,
+    hsla(0,0%,100%,.4),
+    hsla(0,0%,100%,.4) 15px,
+    transparent 0,
+    transparent 30px
+  );
+}
+</style>
+</head>
+<body>
+
+<div class="horizontal"></div>
+<div class="vertical"></div>
+<div class="diagonal-tile"></div>
+<div class="repeating-linear-gradient"></div>
+<div class="repeating-linear-gradient-60"></div>
+<div class="hsla"></div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Image borders</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+div {
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+}
+.stone {
+  padding: 20px;
+  border: 20px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    url(img/stone.jpg) border-box 0 / cover;
+}
+@keyframes ants {
+  0% { background-position: 0 }
+  100% { background-position: 100% }
+}
+.marching-ants {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    repeating-linear-gradient(-45deg, #000 0, #000 25%, white 0, white 50%) 0 / 10px 10px;
+  animation: ants 12s linear infinite;
+}
+
+.border-clipping {
+  border-top: 3px solid transparent;
+  border-image: 100% 0 0 linear-gradient(90deg, currentColor 3em, transparent 0);
+  padding-top: 1em;
+}
+</style>
+</head>
+<body>
+
+<div class="stone"></div>
+<div class="marching-ants"></div>
+
+<p class="border-clipping">1. Footnote</p>
+</body>
+</html>
