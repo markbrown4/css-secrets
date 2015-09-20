@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Frosted glass</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+
+.tiger {
+  vertical-align: middle;
+  width: 300px;
+  height: 188px;
+  margin: 0 10px;
+  overflow: hidden;
+  background: url(img/tiger.jpg) 0 / cover;
+}
+.glass {
+  margin: 40px;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.glass::before {
+  background: url(img/tiger.jpg) -10px -10px / 300px 188px;
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px; bottom: -30px; left: -30px;
+  filter: blur(3px);
+}
+.glass-inner {
+  padding: 20px;
+  background: hsla(0,0%, 100%, .3);
+  position: relative;
+}
+</style>
+</head>
+<body>
+
+<div class="tiger">
+  <div class="glass">
+    <div class="glass-inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</div>
+  </div>
+</div>
+
+<p>Need to apply blur() filter to a psuedo element with background in the same position as the parent</p>
+</body>
+</html>

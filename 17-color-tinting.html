@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Color tinting</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+
+div, img {
+  vertical-align: middle;
+  width: 300px;
+  height: 188px;
+  margin: 0 10px;
+}
+.sepia-hue {
+  filter: sepia(1) saturate(2) hue-rotate(179deg);
+}
+.blend-mode {
+  mix-blend-mode: luminosity;
+}
+.background-blend-mode {
+  background: #487fc1 url(img/tiger.jpg);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  transition: .5s background-color;
+}
+.background-blend-mode:hover {
+  background-color: transparent;
+}
+</style>
+</head>
+<body>
+
+<img class="original" src="img/tiger.jpg" />
+<img class="sepia-hue" src="img/tiger.jpg" />
+<img class="blend-mode" src="img/tiger.jpg" />
+<div class="background-blend-mode"></div>
+
+<p>background-blend-mode is animateable, </p>
+</body>
+</html>
