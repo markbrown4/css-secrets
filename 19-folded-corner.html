@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Folded corner</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+
+div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  margin: 0 10px;
+  background: #fff;
+}
+
+.fake {
+  background:
+    linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 2em 2em,
+    linear-gradient(to left bottom, transparent 1.5em, #fff 0);
+}
+.realistic {
+  position: relative;
+  background: linear-gradient(-150deg, transparent 1.5em, #fff 0);
+  border-radius: .5em;
+}
+.realistic::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  background: linear-gradient(to left bottom,
+    transparent 50%,
+    rgba(0,0,0,.2) 0,
+    rgba(0,0,0,.4) 0
+  ) 100% no-repeat;
+  width: 1.73em;
+  height: 3em;
+  transform: translateY(-1.3em) rotate(-30deg);
+  transform-origin: bottom right;
+  border-bottom-left-radius: inherit;
+  box-shadow: -.2em .2em .3em -.1em rgba(0,0,0, .15);
+}
+</style>
+</head>
+<body>
+
+<div class="fake"></div>
+<div class="realistic"></div>
+
+</body>
+</html>

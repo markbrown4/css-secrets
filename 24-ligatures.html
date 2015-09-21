@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ligatures</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+
+div {
+  display: inline-block;
+  margin: 20px;
+  background: #fff;
+  color: #000;
+  width: 300px;
+  padding: .5em;
+  font: 30px/1.5 "Adobe Caslon Pro", Baskerville, serif;
+}
+
+.common {
+  font-variant-ligatures: common-ligatures;
+}
+.all {
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+}
+
+</style>
+</head>
+<body>
+
+<div class="all">
+  fi fl ffi st ct
+</div>
+<div class="common">
+  fi fl ffi st ct
+</div>
+
+</body>
+</html>

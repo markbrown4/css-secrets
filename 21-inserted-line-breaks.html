@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inserted line breaks</title>
+<link rel="stylesheet" href="css/style.css" />
+<style media="screen">
+
+dt, dd {
+  display: inline;
+}
+dd {
+  margin: 0;
+  font-weight: bold;
+}
+dd + dt::before {
+  content: '\A';
+  white-space: pre;
+}
+dd + dd::before {
+  content: ', ';
+  margin-left: -.25em;
+  font-weight: normal;
+}
+</style>
+</head>
+<body>
+
+<dl>
+  <dt>Name:</dt>
+  <dd>Lea Verou</dd>
+  <dt>Email:</dt>
+  <dd>lea@verou.me</dd>
+  <dd>leaverou@mit.edu</dd>
+  <dt>Location:</dt>
+  <dd>Earth</dd>
+</dl>
+
+</body>
+</html>
